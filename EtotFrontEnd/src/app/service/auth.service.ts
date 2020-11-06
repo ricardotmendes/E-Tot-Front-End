@@ -9,7 +9,7 @@ import { UserLogin } from '../model/UserLogin';
 export class AuthService {
 
   constructor(private http: HttpClient) { }
-}
+
 
 logar(userLogin: UserLogin){
   return this.http.post('http://localhost:8080/usuario/login', userLogin)
@@ -19,4 +19,27 @@ cadastrar(user: User) {
   return this.http.post('http://localhost:8080/usuario/cadastro', user)
 }
 
+btnSair(){
+  let ok = false
+  let token = localStorage.getItem('token')
 
+  if (token != null) {
+    ok = true
+  }
+  return ok
+}
+
+btnLogin(){
+  let ok = false
+  let token = localStorage.getItem('token')
+  
+  if (token == null) {
+    ok = true
+  }
+  return ok
+  }
+
+
+
+
+}
