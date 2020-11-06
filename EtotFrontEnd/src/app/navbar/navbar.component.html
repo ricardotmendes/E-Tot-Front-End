@@ -1,9 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #ffffff;">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #4748a3ad;">
     <!--cor branca por conta do logo / verificar se poderemos mudar-->
     
     
     <a class="navbar-brand" href="#">
-        <img src="./assets/img/logo.png" width="60" height="60" alt="">
+        <img src="./assets/img/logo_2.png" width="60" height="60" alt="">
         Principal</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
         aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
@@ -17,7 +17,7 @@
 
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle texto text-monospace text-uppercase font-weight-bold p-3" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Cursos
                     </a>
@@ -29,13 +29,14 @@
                         <a class="dropdown-item" href="#">Desenvolvimento Pessoal</a>
                     </div>
                 </li>
+                <!--Método para ocultar o Login quando o usuario estiver logado-->
                 <div *ngIf="auth.btnLogin()">
                     <li class="nav-item">
                       <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/login">Login</a>
                     </li>
           
                   </div>
-          
+                  <!--Método para ocultar o Cadastro quando o usuario estiver logado-->
                   <div *ngIf="auth.btnLogin()">
                     <li class="nav-item">
                       <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3"
@@ -45,12 +46,12 @@
                   </div>
 
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/sobrenos">Quem somos</a>
+                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/sobrenos">Quem somos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/faleconosco">Fale Conosco</a>
+                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/faleconosco">Fale Conosco</a>
                 </li>
-
+                 <!--Método para mostrar o Sai quando o usuario estiver logado-->
                 <div *ngIf="auth.btnSair()">
                     <li class="nav-item">
                       <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" (click)='sair()'>Sair</a>

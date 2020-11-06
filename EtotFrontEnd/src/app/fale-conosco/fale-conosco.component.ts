@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaleConoscoComponent implements OnInit {
 
+  nome: string
+
   constructor() { }
 
   ngOnInit() {
     window.scroll(0,0)
   }
+
+
+
+
 
 }
