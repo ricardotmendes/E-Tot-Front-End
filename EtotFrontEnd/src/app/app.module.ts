@@ -13,6 +13,7 @@ import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { AreaLoginComponent } from './area-login/area-login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     SobrenosComponent,
     FaleConoscoComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    AreaLoginComponent
   ],
   imports: [
     BrowserModule,

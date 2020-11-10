@@ -1,49 +1,53 @@
-<title>Fale Conosco!!</title>
+
+<div class="color">
+    <div class="container mb-50 bd-highlight color">
 
 
-
-
-<h1 class="text-center">
-    Entre em contato conosco
-</h1>
-
-
-<div class="container mb-50">
-
-    <div class="row">
-        <div class="col-md-6">
-            <div>
-                <form>
-
-                    <label for="nome" class="tamanho100">Nome: </label> <br>
-                    <input type="text" id='nome'>
-                    <div id="txtNome"></div>
-                    <br>
-
-                    <label for="email">Email: </label> <br>
-                    <input type="text" id='email'>
-                    <div id="txtEmail"></div>
-                    <br>
-
-                    <label for="assunto">Assunto: </label> <br>
-                    <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea>
-                    <div id="txtAssunto"></div>
-                    <br>
-                    <br>
-
-                    <button>Enviar</button>
-                </form>
+        <h1 class="text-center mt-5">
+            Entre em contato conosco
+        </h1>
+    
+        <hr>
+    
+        <div class="d-flex flex-row bd-highlight mb-3">
+    
+            <div class="col-md-5 d-flex justify-content">
+    
+                <div>
+                    
+    
+                        <label for="nome" 
+                        class="w-100">Nome: </label> <br>
+                        <input type="text" id='nome'[(ngModel)]='nome'(keyup)='validaNome()'>
+                        <div id="txtNome"></div>
+                        <br>
+    
+                        <label for="email">Email: </label> <br>
+                        <input type="text" id='email'[(ngModel)]='email' (keyup)='validaEmail()'>
+                        <div id="txtEmail"></div>
+                        <br>
+    
+                        <label for="assunto">Assunto: </label> <br>
+                        <textarea name="assunto" id="assunto" cols="60" rows="5" [(ngModel)]='assunto' (keyup)='validaAssunto'></textarea>
+                        <div id="txtAssunto"></div>
+                        <br>
+                        <br>
+    
+                        <button class="mb-5"(click)='enviar()'>Enviar</button>
+                        <!--[(ngModel)]='botao'   dando erro, verificar se é necessário-->
+                </div>
+            </div>
+        
+        <div class="col-md-4 ">
+            <h3 class=" p-5"> Quem num gosta di mé, boa gentis num é. Casamentiss faiz malandris se pirulitá.</h3>
+        </div>
+            
+            <div class="col-md-3">
+                <div class="d-flex justify-content-end ">
+                    <img height="400px" src="assets/img/thoth.png" alt="Deus Tot">
+                </div>
             </div>
         </div>
-
-        <div class="col-md-6">
-            <div class="d-flex justify-content-end">
-                <img src="" alt="Deus Tot">
-            </div>
-        </div>
-
+        
     </div>
-
-
-
 </div>

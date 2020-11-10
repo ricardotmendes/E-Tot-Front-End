@@ -32,7 +32,7 @@ export class CadastroComponent implements OnInit {
 
       })
     } else {
-      alert('Saus senhas não conferem')
+      alert('Suas senhas não conferem')
     }
        
   }
