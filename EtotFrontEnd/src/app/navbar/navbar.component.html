@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #4748a3ad;">
+    <!--cor branca por conta do logo / verificar se poderemos mudar-->
+    
+    
+    <a class="navbar-brand" href="#">
+        <img src="./assets/img/logo_2.png" width="60" height="60" alt="">
+        Principal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--Opções do NavBar-->
+    <div class="container">
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav mr-auto">
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/area-login" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cursos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Tecnologia</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Profissinalizantes</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Desenvolvimento Pessoal</a>
+                    </div>
+                </li>
+                <!--Método para ocultar o Login quando o usuario estiver logado-->
+                <div *ngIf="auth.btnLogin()">
+                    <li class="nav-item">
+                      <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/login">Login</a>
+                    </li>
+          
+                  </div>
+                  <!--Método para ocultar o Cadastro quando o usuario estiver logado-->
+                  <div *ngIf="auth.btnLogin()">
+                    <li class="nav-item">
+                      <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3"
+                        routerLink="/cadastro">Cadastro</a>
+                    </li>
+          
+                  </div>
+
+                <li class="nav-item">
+                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/sobrenos">Quem somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/faleconosco">Fale Conosco</a>
+                </li>
+                 <!--Método para mostrar o Sai quando o usuario estiver logado-->
+                <div *ngIf="auth.btnSair()">
+                    <li class="nav-item">
+                      <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" (click)='sair()'>Sair</a>
+                    </li>
+                  </div>
+
+            </ul>
+        <!--Opções do NavBar-->
+
+        
+
+        </div>
+
+    </div>
+
+</nav>

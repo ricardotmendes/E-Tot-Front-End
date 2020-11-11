@@ -1,0 +1,13 @@
+.color
+{
+    background-color: #9932cc;
+}
+
+.tamanho100
+{
+    width: 100%;
+}
+
+#assunto {
+    resize: none;
+  }

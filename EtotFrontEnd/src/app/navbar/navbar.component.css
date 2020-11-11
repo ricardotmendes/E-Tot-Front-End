@@ -1,0 +1,7 @@
+.nav-item :hover {
+    color:greenyellow !important;
+}
+
+a {
+    cursor: pointer;
+  }
