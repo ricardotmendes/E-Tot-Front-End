@@ -11,15 +11,15 @@
 
             <!--Campos do Formulário-->
             <div class="form-group">
-                <label class="text-monospace" for="titulo">Título:</label>
-                <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu título"
-                    >
+                <label class="text-monospace" for="nome">Nome do Curso:</label>
+                <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o nome do curso"
+                  [(ngModel)]='produto.nome' >
             </div>
 
             <div class="form-group">
-                <label class="text-monospace" for="texto">Descrição</label>
-                <textarea class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu texto"
-                    ></textarea>
+                <label class="text-monospace" for="professor">Instrutor(a):</label>
+                <input type="text" class="form-control" id="professor" placeholder="Digite aqui o nome do instrutor(a)"
+                [(ngModel)]='produto.professor'>
             </div>
 
             <div class="row d-flex align-items-end">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 d-flex ">
-                    <button type="button" class="btn btn-outline-info w-25">Incluir</button>
+                    <button type="button" class="btn btn-outline-info w-25" (click)="publicar()">Incluir</button>
                 </div>
             </div>
 

@@ -5,6 +5,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'cadastro', component: CadastroComponent},
   {path: 'area-login', component: AreaLoginComponent},
+  {path: 'cadastro-categoria', component: PostCategoriaComponent},
 ];
 
 @NgModule({

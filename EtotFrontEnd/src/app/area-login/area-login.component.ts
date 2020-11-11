@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { CategoriaService } from '../service/categoria.service';
@@ -21,6 +22,7 @@ export class AreaLoginComponent implements OnInit {
   constructor(
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
+    private router: Router,
 
   ) { }
 
@@ -34,6 +36,23 @@ export class AreaLoginComponent implements OnInit {
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) =>{
       this.listaProdutos = resp;
     })
+  }
+
+
+  publicar() {
+    this.categoria.id = this.IdCategoria
+    this.produto.categoria = this.categoria
+
+    if (this.produto.nome == null || this.produto.professor == null || this.produto.categoria == null) {
+      alert('Preencha todos os campos antes de cadastrar!')
+    } else {
+      this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
+        this.produto = resp
+        this.produto = new Produto()
+        alert('Postagem realizada com sucesso!')
+        this.findAllProdutos()
+      })
+    }
   }
 
   findAllCategorias(){

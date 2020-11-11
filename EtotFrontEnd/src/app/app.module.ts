@@ -14,6 +14,7 @@ import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { AreaLoginComponent } from './area-login/area-login.component';
+import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AreaLoginComponent } from './area-login/area-login.component';
     FaleConoscoComponent,
     LoginComponent,
     CadastroComponent,
-    AreaLoginComponent
+    AreaLoginComponent,
+    PostCategoriaComponent
   ],
   imports: [
     BrowserModule,
