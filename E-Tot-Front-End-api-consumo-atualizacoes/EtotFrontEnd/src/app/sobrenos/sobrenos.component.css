@@ -1,0 +1,30 @@
+/* Cor das letras violetas*/
+.cor {
+color: darkviolet;
+    
+    
+}
+
+/* cor e sombra das letras*/
+.fonteRoxa {
+    color:#0000ff;
+    text-align: Courier New;
+    text-shadow: 0.1em 0.1em 0.15em #380236;
+}
+/* cor das letras azuis*/
+.fontAzul {
+    color:#0000ff;
+    ;
+}
+/* cores das letras do jumbo*/
+.jumbo {
+    text-shadow: -1px 0 rgb(16, 12, 238), 0 1px rgb(7, 40, 228),
+      1px 0 rgb(187, 13, 240), 0 -1px rgb(182, 10, 197);
+      
+      
+}
+
+
+/* Esse código é só para tirar as margens */
+body,html{margin:0;padding:0;}
+
