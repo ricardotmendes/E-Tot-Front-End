@@ -14,10 +14,12 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Categoria</a>
+          <li class="nav-item" *ngIf='auth.instrutor()'>
+            <a class="nav-link" routerLink="/area-login">Categoria</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" routerLink="/sobrenos">Sobre nós</a>
+            </li>
               <li class="nav-item">
                 <a class="nav-link" routerLink="/faleconosco">Contato</a>
               </li>             

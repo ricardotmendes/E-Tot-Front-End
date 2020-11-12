@@ -7,7 +7,7 @@
 
             <div class="form-group">
                 <label class= "text-monospace" for="texto">Nome da Categoria</label>
-                <input class= "form-control" id="texto" rows='3' placeholder="Digite aqui a nova categoria" [(ngModel)]='categoria.descricao'>
+                <input class= "form-control" id="texto" rows='3' placeholder="Digite aqui a nova categoria" [(ngModel)]='categoria.titulo'>
             </div>
             <div class="row mb-5">
                 <div class="col-md-12 d-flex justify-content-center">
@@ -36,11 +36,11 @@
                 <tbody>
                   <tr *ngFor='let item of listaCategorias'>
                     <th scope="row">{{item.id}}</th>
-                    <td>{{item.descricao}}</td>
+                    <td>{{item.titulo}}</td>
                     
                         <td class="d-flex justify-content-end">
-                            <a class="btn btn-outline-info mr-3">Editar</a>                            
-                            <a class="btn btn-outline-danger">Apagar</a> 
+                            <a class="btn btn-outline-info mr-3" [routerLink] = "['/editar-categoria', item.id]">Editar</a>                            
+                            <a class="btn btn-outline-danger" [routerLink] = "['/delete-categoria', item.id]">Apagar</a> 
                             
                         </td>                  
                     </tr> 

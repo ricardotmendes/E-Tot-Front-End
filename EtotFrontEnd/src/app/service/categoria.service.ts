@@ -19,11 +19,19 @@ export class CategoriaService {
   }
 
   getByIdCategoria(id: number) {
-    return this.http.get(`http://localhost:8080/categoria${id}`, this.token)
+    return this.http.get(`http://localhost:8080/categoria/${id}`, this.token)
   }
 
   postCategoria(categoria: Categoria){
     return this.http.post('http://localhost:8080/categoria', categoria, this.token)
+  }
+
+  putCategoria(categoria: Categoria){
+    return this.http.put('http://localhost:8080/categoria',categoria, this.token)
+  }
+
+  deleteCategoria(id: number){
+    return this.http.delete(`http://localhost:8080/categoria/${id}`, this.token) 
   }
 
 }

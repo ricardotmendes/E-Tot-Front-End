@@ -15,7 +15,7 @@ export class PostCategoriaComponent implements OnInit {
   
   constructor(
     private categoriaService: CategoriaService,
-    private router: Router,
+    private router: Router
 
   ) { }
 
@@ -37,7 +37,7 @@ export class PostCategoriaComponent implements OnInit {
 
 
   cadastrar(){
-    if(this.categoria.descricao == null){
+    if(this.categoria.titulo == null){
       alert('Preencha o campo corretamente')
     } else {
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {

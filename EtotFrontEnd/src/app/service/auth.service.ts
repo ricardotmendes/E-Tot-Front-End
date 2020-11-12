@@ -19,6 +19,7 @@ cadastrar(user: User) {
   return this.http.post('http://localhost:8080/usuario/cadastro', user)
 }
 
+// Método para mostrar o botão Sair apenas quando houver um token, ou seja, usuário logado
 btnSair(){
   let ok = false
   let token = localStorage.getItem('token')
@@ -28,7 +29,7 @@ btnSair(){
   }
   return ok
 }
-
+// Método para mostrar o botão Cadastrar e Login, para quando nao houver usuario logado
 btnLogin(){
   let ok = false
   let token = localStorage.getItem('token')
@@ -38,7 +39,15 @@ btnLogin(){
   }
   return ok
   }
-
+instrutor(){
+  let ok = false
+  let usuario = localStorage.getItem('usuario')
+  
+  if (usuario.indexOf('instrutor') != -1) {
+    ok = true
+  }
+  return ok
+}
 
 
 

@@ -22,7 +22,7 @@ export class AreaLoginComponent implements OnInit {
   constructor(
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
-    private router: Router,
+    private router: Router
 
   ) { }
 
@@ -30,6 +30,11 @@ export class AreaLoginComponent implements OnInit {
     window.scroll(0,0)
     this.findAllProdutos()
     this.findAllCategorias()
+    let usuario = localStorage.getItem("usuario")
+    if(usuario.indexOf('instrutor') == -1){
+      alert('Você não tem permissão para acessar essa rota!')
+      this.router.navigate(['/home'])
+    }
   }
 
   findAllProdutos(){

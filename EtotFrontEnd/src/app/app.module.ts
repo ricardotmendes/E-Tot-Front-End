@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import {OrderModule} from 'ngx-order-pipe';
+import {ModalModule} from 'ngx-bootstrap/modal/'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,10 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { AreaLoginComponent } from './area-login/area-login.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
+import { PutProdutoComponent } from './put-produto/put-produto.component';
+import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
+import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +33,20 @@ import { PostCategoriaComponent } from './post-categoria/post-categoria.componen
     LoginComponent,
     CadastroComponent,
     AreaLoginComponent,
-    PostCategoriaComponent
+    PostCategoriaComponent,
+    PutProdutoComponent,
+    PutCategoriaComponent,
+    DeleteCategoriaComponent,
+    DeleteProdutoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    OrderModule,
+    ModalModule.forRoot()
     
   ],
   providers: [],
