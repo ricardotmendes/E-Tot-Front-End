@@ -1,31 +1,3 @@
-.bg-1{
-
-    background-color: #696969;
-    
-}
-
-.bg-2{
-    background-color: #d4d4d481;
-}
-ul.social-network {
-    list-style: none;
-    display: inline;
-  
-    padding: 0;
-  }
-  
-  ul.social-network li {
-    display: inline;
-    margin: 0;
-    padding: 5px;
-  }
-  
-  .faInstagram{
-      color: white;
-  }
-  
-  
-  
-  .faInstagram:hover{
-  color: #C13584;
-  }
+footer a.text-light:hover { color: #fed136!important; text-decoration: none; }
+footer .cizgi { border-right: 1px solid #535e67; }
+@media (max-width: 992px) { footer .cizgi { border-right: none; } }

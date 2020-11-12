@@ -1,70 +1,43 @@
-<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #4748a3ad;">
-    <!--cor branca por conta do logo / verificar se poderemos mudar-->
-    
-    
-    <a class="navbar-brand" href="#">
-        <img src="./assets/img/logo_2.png" width="60" height="60" alt="">
-        Principal</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <!--Opções do NavBar-->
+  <nav class="navbar sticky-top navbar-expand-lg bg-warning">
     <div class="container">
-        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-            <ul class="navbar-nav mr-auto">
+        <img src="https://images.vexels.com/media/users/3/153709/isolated/preview/9e60d6f09cfb53076bf8fdefaf01a3ce---cone-de-tra--ado-de-chap--u-de-formatura-by-vexels.png" width="80" height="80" alt="">
+      <a class="navbar-brand fonteE" href="#">E-tot</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   <i class="fas fa-bars"></i>
+  </button>
 
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/area-login" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Cursos
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Tecnologia</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Profissinalizantes</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Desenvolvimento Pessoal</a>
-                    </div>
-                </li>
-                <!--Método para ocultar o Login quando o usuario estiver logado-->
-                <div *ngIf="auth.btnLogin()">
-                    <li class="nav-item">
-                      <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/login">Login</a>
-                    </li>
-          
-                  </div>
-                  <!--Método para ocultar o Cadastro quando o usuario estiver logado-->
-                  <div *ngIf="auth.btnLogin()">
-                    <li class="nav-item">
-                      <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3"
-                        routerLink="/cadastro">Cadastro</a>
-                    </li>
-          
-                  </div>
-
-                <li class="nav-item">
-                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/sobrenos">Quem somos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/faleconosco">Fale Conosco</a>
-                </li>
-                 <!--Método para mostrar o Sai quando o usuario estiver logado-->
-                <div *ngIf="auth.btnSair()">
-                    <li class="nav-item">
-                      <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" (click)='sair()'>Sair</a>
-                    </li>
-                  </div>
-
-            </ul>
-        <!--Opções do NavBar-->
-
-        
-
+      <div class="collapse navbar-collapse container" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto w-100 justify-content-end">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Categoria</a>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/sobrenos">Sobre nós</a>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/faleconosco">Contato</a>
+              </li>             
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          COMEÇAR AGORA
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="/cadastro">Cadastro</a>
+          <a class="dropdown-item" routerLink="/login">Login</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Saber mais</a>
         </div>
-
+      </div>
     </div>
 
-</nav>
+  </nav>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
