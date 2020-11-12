@@ -18,14 +18,25 @@
             <a class="nav-link" routerLink="/area-login">Categoria</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" routerLink="">Minha Área</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" routerLink="/sobrenos">Sobre nós</a>
             </li>
               <li class="nav-item">
                 <a class="nav-link" routerLink="/faleconosco">Contato</a>
-              </li>             
+              </li> 
+              
+              <li class="nav-item" *ngIf='auth.btnSair()'>
+                <a class="nav-link" (click)='sair()'>Sair</a>
+              </li>
+               
+
+             
+             
         </ul>
       </div>
-      <div class="btn-group">
+      <div class="btn-group"  *ngIf='auth.btnLogin()'>
         <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           COMEÇAR AGORA
         </button>

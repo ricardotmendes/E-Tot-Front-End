@@ -29,6 +29,8 @@ btnSair(){
   }
   return ok
 }
+
+
 // Método para mostrar o botão Cadastrar e Login, para quando nao houver usuario logado
 btnLogin(){
   let ok = false
@@ -39,16 +41,15 @@ btnLogin(){
   }
   return ok
   }
-instrutor(){
+  instrutor(){
   let ok = false
   let usuario = localStorage.getItem('usuario')
   
-  if (usuario.indexOf('instrutor') != -1) {
+  if (usuario.indexOf('instrutor') != 1){
+  //if (usuario == 'instrutor') 
     ok = true
   }
   return ok
 }
-
-
 
 }

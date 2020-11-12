@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
   //método para sair do site
 sair() {
   
-  this.router.navigate(['/login'])
+  this.router.navigate(['/home'])
   localStorage.clear()
 }
 }
