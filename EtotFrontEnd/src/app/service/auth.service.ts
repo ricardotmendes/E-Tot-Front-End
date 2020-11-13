@@ -45,8 +45,8 @@ btnLogin(){
   let ok = false
   let usuario = localStorage.getItem('usuario')
   
-  if (usuario.indexOf('instrutor') != 1){
-  //if (usuario == 'instrutor') 
+  //if (usuario.indexOf('instrutor') != -1){
+  if (usuario == 'instrutor'){ 
     ok = true
   }
   return ok

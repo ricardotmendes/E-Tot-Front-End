@@ -24,7 +24,13 @@ export class LoginComponent implements OnInit {
      this.userLogin = resp 
      localStorage.setItem('token', this.userLogin.token)
      localStorage.setItem('usuario', this.userLogin.usuario)
-     this.router.navigate(['/area-login'])
+      if(this.userLogin.usuario == 'instrutor'){
+        this.router.navigate(['/area-login'])
+      } else{
+        this.router.navigate(['/aluno-cursos'])
+      }
+
+     
      //alterar router.navigate/home  depois para page dentro dos cursos, por exemplo
     })
   }

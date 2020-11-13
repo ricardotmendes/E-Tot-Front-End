@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AlunoCursosComponent } from './aluno-cursos/aluno-cursos.component';
 import { AreaLoginComponent } from './area-login/area-login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { CursosComponent } from './cursos/cursos.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
@@ -25,7 +27,9 @@ const routes: Routes = [
   {path: 'editar-categoria/:id', component: PutCategoriaComponent},
   {path: 'delete-categoria/:id', component: DeleteCategoriaComponent},
   {path: 'editar-produto/:id', component: PutProdutoComponent},
-  {path: 'delete-produto/:id', component: DeleteProdutoComponent}
+  {path: 'delete-produto/:id', component: DeleteProdutoComponent},
+  {path: 'aluno-cursos', component: AlunoCursosComponent},
+  {path: 'cursos', component: CursosComponent},
 ];
 
 @NgModule({

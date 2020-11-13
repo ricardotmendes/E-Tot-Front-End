@@ -17,8 +17,11 @@
           <li class="nav-item" *ngIf='auth.instrutor()'>
             <a class="nav-link" routerLink="/area-login">Categoria</a>
             </li>
+            <li class="nav-item" *ngIf='auth.btnSair()'>
+              <a class="nav-link" routerLink="/aluno-cursos">Minha Área</a>
+            </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="">Minha Área</a>
+              <a class="nav-link" routerLink="/cursos">Cursos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" routerLink="/sobrenos">Sobre nós</a>
