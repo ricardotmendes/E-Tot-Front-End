@@ -1,59 +1,90 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+  crossorigin="anonymous"
+/>
 
-  <nav class="navbar sticky-top navbar-expand-lg bg-warning">
-    <div class="container">
-        <img src="https://images.vexels.com/media/users/3/153709/isolated/preview/9e60d6f09cfb53076bf8fdefaf01a3ce---cone-de-tra--ado-de-chap--u-de-formatura-by-vexels.png" width="80" height="80" alt="">
-      <a class="navbar-brand fonteE" href="#">E-tot</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-   <i class="fas fa-bars"></i>
-  </button>
+<nav class="navbar sticky-top navbar-expand-lg bg-dark">
+  <div class="container">
+    <img
+      src="https://images.vexels.com/media/users/3/153709/isolated/preview/9e60d6f09cfb53076bf8fdefaf01a3ce---cone-de-tra--ado-de-chap--u-de-formatura-by-vexels.png"
+      width="80"
+      height="80"
+      alt=""
+    />
+    <a class="navbar-brand fonteE" href="#">e-TOT</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
 
-      <div class="collapse navbar-collapse container" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto w-100 justify-content-end">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item" *ngIf='auth.instrutor()'>
-            <a class="nav-link" routerLink="/area-login">Categoria</a>
-            </li>
-            <li class="nav-item" *ngIf='auth.btnSair()'>
-              <a class="nav-link" routerLink="/aluno-cursos">Minha Área</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/cursos">Cursos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/sobrenos">Sobre nós</a>
-            </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/faleconosco">Contato</a>
-              </li> 
-              
-              <li class="nav-item" *ngIf='auth.btnSair()'>
-                <a class="nav-link" (click)='sair()'>Sair</a>
-              </li>
-               
+    <div class="collapse navbar-collapse container" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto w-100 justify-content-end">
+        <li class="nav-item active">
+          <a class="nav-link navcolor1" href="#"
+            >Home <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item" *ngIf='auth.instrutor()'>
+          <a class="nav-link navcolor2" routerLink="/area-login">Categoria</a>
+        </li>
 
-             
-             
-        </ul>
-      </div>
-      <div class="btn-group"  *ngIf='auth.btnLogin()'>
-        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          COMEÇAR AGORA
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" routerLink="/cadastro">Cadastro</a>
-          <a class="dropdown-item" routerLink="/login">Login</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Saber mais</a>
-        </div>
+        <li class="nav-item" *ngIf='auth.btnSair()'>
+          <a class="nav-link navcolor2" routerLink="/aluno-cursos">Minha Área</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link navcolor2" routerLink="/cursos">Cursos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link navcolor2" routerLink="/sobrenos">Sobre nós</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link navcolor2" routerLink="/faleconosco">Contato</a>
+        </li>
+        <li class="nav-item" *ngIf='auth.btnSair()'>
+          <a class="nav-link navcolor2" (click)='sair()'>Sair</a>
+        </li>
+      </ul>
+    </div>
+    <div class="btn-group" *ngIf='auth.btnLogin()'>
+      <button
+        type="button"
+        class="btn btn-warning dropdown-toggle"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        COMEÇAR AGORA
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" routerLink="/cadastro">Cadastro</a>
+        <a class="dropdown-item" routerLink="/login">Login</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Saber mais</a>
       </div>
     </div>
+  </div>
+</nav>
 
-  </nav>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"
+></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
