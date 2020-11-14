@@ -5,6 +5,7 @@ import {FormsModule} from '@angular/forms';
 import {OrderModule} from 'ngx-order-pipe';
 import {ModalModule} from 'ngx-bootstrap/modal/'
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -23,6 +24,7 @@ import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.co
 import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
 import { AlunoCursosComponent } from './aluno-cursos/aluno-cursos.component';
 import { CursosComponent } from './cursos/cursos.component';
+import { AlertsComponent } from './alerts/alerts.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { CursosComponent } from './cursos/cursos.component';
     DeleteCategoriaComponent,
     DeleteProdutoComponent,
     AlunoCursosComponent,
-    CursosComponent
+    CursosComponent,
+    AlertsComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,8 @@ import { CursosComponent } from './cursos/cursos.component';
     HttpClientModule,
     FormsModule,
     OrderModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    
     
   ],
   providers: [],

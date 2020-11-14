@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { AlertsService } from '../service/alerts.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -24,6 +25,7 @@ export class PutProdutoComponent implements OnInit {
     private produtoService: ProdutoService,
     private router: Router,
     private route: ActivatedRoute,
+    private alert: AlertsService,
     
    
   ) { }
@@ -49,10 +51,10 @@ export class PutProdutoComponent implements OnInit {
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
       this.router.navigate(['/area-login'])
-      alert('Postagem alterada com sucesso')
+      this.alert.showAlertSuccess('Postagem alterada com sucesso')
     }, err => {
       if (err.status == '500'){
-        alert('Preencha todos os campos corretamente antes de enviar!')
+            this.alert.showAlertDanger('Preencha todos os campos corretamente antes de enviar!')
       }
     })
   }

@@ -41,7 +41,13 @@ btnLogin(){
   }
   return ok
   }
-  instrutor(){
+
+
+
+
+
+
+instrutor(){
   let ok = false
   let usuario = localStorage.getItem('usuario')
   

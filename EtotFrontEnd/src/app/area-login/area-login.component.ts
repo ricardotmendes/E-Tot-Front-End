@@ -4,6 +4,7 @@ import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
+import { AlertsService } from '../service/alerts.service';
 
 @Component({
   selector: 'app-area-login',
@@ -22,7 +23,8 @@ export class AreaLoginComponent implements OnInit {
   constructor(
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
-    private router: Router
+    private router: Router,
+    private alert: AlertsService
 
   ) { }
 
@@ -49,7 +51,7 @@ export class AreaLoginComponent implements OnInit {
     this.produto.categoria = this.categoria
 
     if (this.produto.nome == null || this.produto.professor == null || this.produto.categoria == null) {
-      alert('Preencha todos os campos antes de cadastrar!')
+      this.alert.showAlertDanger('Preencha todos os campos antes de cadastrar!')
     } else {
       this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
         this.produto = resp

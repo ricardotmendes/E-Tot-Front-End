@@ -1,4 +1,3 @@
-  
 <div class="container">
     <div class="row mt-5 mb-5">
         <div class="col-md-12">
@@ -13,31 +12,33 @@
                 <div class="form-group">
                     <label for='nome'>Nome</label>
                     <input type="text" class='form-control' id="nome" placeholder="Digite seu nome aqui"
-                        [(ngModel)]='user.nome'>
-
+                        [(ngModel)]='user.nome' (keyup)='validaNome()'>
+                    <div id="txtNome"></div>
                 </div>
                 <div class="form-group">
                     <label for='usuario'>Usuario</label>
                     <input type="text" class='form-control' id="usuario" placeholder="Apelido"
-                        [(ngModel)]='user.usuario'>
-
+                        [(ngModel)]='user.usuario' (keyup)='validaUsuario()'>
+                    <div id="txtUsuario"></div>
                 </div>
                 <div class="form-group">
                     <label for='usuario'>Email</label>
                     <input type="email" class='form-control' id="email" placeholder="exemplo@email.com"
-                        [(ngModel)]='user.email'>
-
+                        [(ngModel)]='user.email' (keyup)='validaEmail()'>
+                    <div id="txtEmail"></div>
                 </div>
                 <div class="form-group">
                     <label for="senha">Senha</label>
                     <input type="password" class="form-control" id="senha" placeholder="Digite sua senha"
-                        (input)='conferirSenha($event)' value='{{senha}}' >
+                        (input)='conferirSenha($event)' value='{{senha}}' (keyup)='validaSenha()'>
+                    <div id="txtSenha"></div>
                 </div>
 
                 <div class="form-group">
                     <label for="senhaConf">Confirmar Senha</label>
                     <input type="password" class="form-control" id="senhaConf"
                         placeholder="Digite a confirmação de senha" [(ngModel)]='user.senha'>
+                    <div id="txtSenhaConf"></div>
                 </div>
 
                 <div class="dflex justify-content-center">
@@ -47,3 +48,23 @@
         </div>
     </div>
 </div>
+
+
+                <!--   
+                    
+                                    
+                    
+                    
+                    <div class="form-group">
+                    <label for="aluno">Tipo de cadastro:</label>
+                    <select name="aluno" id="aluno" class="form-control" [(ngModel)]="professor">
+                        <option ng-value= 'true'>
+                        Aluno
+                        </option>
+                        <option  ng-value= 'false'>
+                        Professor
+                        </option>
+                    </select>
+
+
+                </div>-->

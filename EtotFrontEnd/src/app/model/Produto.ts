@@ -6,6 +6,7 @@ export class Produto {
     public duracao: number
     public professor: string
     public descricao: string
+    public preco: number
     public categoria: Categoria
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
+import { AlertsService } from '../service/alerts.service';
 import { CategoriaService } from '../service/categoria.service';
 
 @Component({
@@ -17,6 +18,7 @@ export class PutCategoriaComponent implements OnInit {
     private categoriaService: CategoriaService,
     private router: Router,
     private route: ActivatedRoute,
+    private alert: AlertsService,
     
   ) { }
 
@@ -34,15 +36,15 @@ export class PutCategoriaComponent implements OnInit {
 
   salvar() {
     if (this.categoria.produto.length != 0) {
-      alert('Esse tema não pode ser modificado, pois já pertence a uma postagem.')
+      this.alert.showAlertDanger('Esse tema não pode ser modificado, pois já pertence a uma postagem.')
       this.router.navigate(['/cadastro-categoria'])
     } else if (this.categoria.titulo == null || this.categoria.titulo == ''){
-      alert('A descrição não pode ficar vazia!')
+      this.alert.showAlertDanger('A descrição não pode ficar vazia!')
     } else {
       this.categoriaService.putCategoria(this.categoria).subscribe((resp: Categoria) => {
         this.categoria = resp
         this.router.navigate(['/cadastro-categoria'])
-        alert('Tema atualizado com sucesso!')
+        this.alert.showAlertSuccess('Tema atualizado com sucesso!')
       })
     }
   }

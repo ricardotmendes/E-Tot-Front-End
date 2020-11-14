@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
+import { AlertsService } from '../service/alerts.service';
 import { CategoriaService } from '../service/categoria.service';
 
 @Component({
@@ -15,8 +16,8 @@ export class PostCategoriaComponent implements OnInit {
   
   constructor(
     private categoriaService: CategoriaService,
-    private router: Router
-
+    private router: Router,
+    private alert: AlertsService,
   ) { }
 
   ngOnInit() {
@@ -43,7 +44,7 @@ export class PostCategoriaComponent implements OnInit {
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
         this.categoria = resp
         this.router.navigate[('/area-login')]
-        alert ("Categoria cadastrada com sucesso!")
+        this.alert.showAlertSuccess("Categoria cadastrada com sucesso!")
       })
     }
   }
