@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 
 @Injectable({
@@ -11,11 +12,11 @@ export class CategoriaService {
 
 
   token = {
-    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
+    headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
   getAllCategorias(){
-    return this.http.get('http://localhost:8080/categoria', this.token)
+    return this.http.get('http://localhost:8080/categoria')
   }
 
   getByIdCategoria(id: number) {

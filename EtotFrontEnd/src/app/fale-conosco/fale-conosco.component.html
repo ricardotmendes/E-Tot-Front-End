@@ -8,8 +8,8 @@
 </div>
 
 
-<div class=" container justify-content ">
-    <div class=" mb-5 bd-highlight ">
+<div class=" container justify-content">
+    <div class=" mb-5 bd-highlight">
 
 
 
@@ -22,21 +22,21 @@
                 <div>
 
                     <!--Campos de preenchimento-->
-<!--Campo Inserir nome-->
+                    <!--Campo Inserir nome-->
                     <label for="nome">Nome completo: </label> <br>
                     <input type="text" id='nome' class="w-100 p-1 bg-white rounded" [(ngModel)]='nome'
                         (keyup)='validaNome()'>
                     <div id="txtNome"></div>
                     <br>
                     <!--Campo Inserir nome-->
-<!--Campo inserir email-->
+                    <!--Campo inserir email-->
                     <label for="email">Email: </label> <br>
                     <input type="text" id='email' class="w-100 p-1 bg-white rounded" [(ngModel)]='email'
                         (keyup)='validaEmail()'>
                     <div id="txtEmail"></div>
                     <br>
                     <!--Campo inserir email-->
-<!--Campo para inserir assunto-->
+                    <!--Campo para inserir assunto-->
                     <label for="assunto">Assunto: </label> <br>
                     <textarea class="w-100 shadow-sm p-3 mb-5 bg-white rounded" name="assunto" id="assunto" cols="60"
                         rows="5" [(ngModel)]='assunto' (keyup)='validaAssunto()'></textarea>
@@ -44,7 +44,7 @@
                     <br>
                     <br>
                     <!--Campo para inserir assunto-->
-<!--botão enviar-->
+                    <!--botão enviar-->
                     <button type="button" class="mb-5 btn btn-success" (click)='enviar()'>Enviar</button>
                     <!--botão enviar-->
                     <!--Campos de preenchimento-->

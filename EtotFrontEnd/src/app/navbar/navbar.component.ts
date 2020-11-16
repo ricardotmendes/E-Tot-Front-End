@@ -15,13 +15,13 @@ export class NavbarComponent implements OnInit {
     //public pois vai aparecer ou não na tela
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    
   }
 
   //método para sair do site
 sair() {
-  
-  this.router.navigate(['/login'])
+  this.router.navigate(['/home'])
   localStorage.clear()
 }
 }

@@ -21,6 +21,8 @@ export class CadastroComponent implements OnInit {
   senha  : String
   senhaOk: boolean
 
+  tipo: string
+
   user: User = new User()
   
 
@@ -40,8 +42,9 @@ export class CadastroComponent implements OnInit {
   }
 
   cadastrar() {
-    if(this.nomeOk == true && this.emailOk == true && this.senhaOk == true && this.senha === this.user.senha)
-    {
+    this.user.tipo = this.tipo
+      if(this.nomeOk == true && this.emailOk == true && this.senhaOk == true && this.senha === this.user.senha)
+      {
         this.authService.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp
         this.router.navigate(['/login'])
@@ -146,6 +149,11 @@ export class CadastroComponent implements OnInit {
         this.senhaOk = true
         
     }
+  }
+
+
+  escolhaTipo(event) {
+    this.tipo = event.target.value
   }
 
 
